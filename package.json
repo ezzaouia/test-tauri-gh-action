@@ -1,0 +1,15 @@
+{
+  "name": "tauri-gh-action",
+  "version": "1.0.0",
+  "license": "MIT",
+  "packageManager": "yarn@4.2.2",
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@tauri-apps/cli": "^2.0.0-beta.18"
+  }
+}

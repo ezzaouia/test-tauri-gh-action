@@ -1,0 +1,67 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": ["main"],
+  "permissions": [
+    "fs:allow-create",
+    "fs:allow-read-file",
+    "fs:allow-read-text-file",
+    "fs:allow-write-file",
+    "fs:allow-write-text-file",
+    "fs:allow-read-dir",
+    "fs:allow-copy-file",
+    "fs:allow-mkdir",
+    "fs:allow-remove",
+    "fs:allow-rename",
+    "fs:allow-exists",
+    "fs:allow-stat",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        {
+          "path": "$HOME/**/*"
+        },
+        {
+          "path": "**/.trash"
+        },
+        {
+          "path": "**/.trash/**"
+        },
+        {
+          "path": "$APPCONFIG"
+        },
+        {
+          "path": "$APPCONFIG/**/*"
+        }
+      ]
+    },
+    "upload:allow-download",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "dialog:allow-message",
+    "dialog:allow-ask",
+    "dialog:allow-confirm",
+    "updater:default",
+    "path:allow-basename",
+    "path:allow-dirname",
+    "path:allow-join",
+    "path:allow-extname",
+    "path:allow-normalize",
+    "path:allow-resolve",
+    "event:default",
+    "window:default",
+    "webview:default",
+    "app:default",
+    "resources:default",
+    "image:default",
+    "menu:default",
+    "tray:default",
+    "store:allow-get",
+    "store:allow-set",
+    "store:allow-delete",
+    "store:allow-save",
+    "webview:allow-create-webview-window"
+  ],
+  "platforms": ["linux", "macOS", "windows", "android", "iOS"]
+}
